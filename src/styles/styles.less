@@ -1,0 +1,27 @@
+@background: #282F34;
+@main: #9bc4d1;
+
+.box-shadow (@string) {
+  -webkit-box-shadow: @string;
+  -moz-box-shadow:    @string;
+  box-shadow:         @string;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: @background;
+}
+
+.ui-app {
+  width: 45%;
+  height: 100%;
+  margin-left: 45%;
+  background: @main;
+  .box-shadow(inset 0px 0px 30px rgba(0,0,0,.5));
+
+}
