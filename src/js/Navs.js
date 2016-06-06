@@ -8,3 +8,5 @@ var Navigation = React.createClass({
     )
   }
 });
+
+module.exports = Navigation;
