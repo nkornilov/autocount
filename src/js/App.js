@@ -1,3 +1,4 @@
+const ReactDOM = require('react-dom');
 var Header = require('./components/Header');
 
-React.render(<Header />, document.getElementById('app'));
+ReactDOM.render(<Header />, document.getElementById('app'));

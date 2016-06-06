@@ -1,7 +1,8 @@
+var React = require('react');
 var Navigation = React.createClass({
   render: function () {
     return (
-      <div></div>
+      <div>Hello</div>
     )
   }
 });

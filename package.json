@@ -19,6 +19,8 @@
   "homepage": "https://github.com/own-wave/autocount#readme",
   "devDependencies": {
     "browserify": "^13.0.1",
+    "del": "^2.2.0",
+    "express": "^4.13.4",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-html-replace": "^1.5.5",

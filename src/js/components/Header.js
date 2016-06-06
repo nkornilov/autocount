@@ -1,10 +1,10 @@
-var Navigation = require("./Navs");
-
+//var Navigation = require("./components/Navigation");
+var React = require('react');
 var Header = React.createClass({
   render: function () {
     return (
       <header>
-        <Navigation />
+        This is header!
       </header>
     )
   }
