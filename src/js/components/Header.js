@@ -1,13 +1,13 @@
-//var Navigation = require("./components/Navigation");
 var React = require('react');
-var Header = React.createClass({
+var Navigation = require('./Navigation');
+
+module.exports = React.createClass({
   render: function () {
     return (
-      <header>
-        This is header!
-      </header>
+      <div className="ui-header">
+        This is Header
+        <Navigation />
+      </div>
     )
   }
 });
-
-module.exports = Header;

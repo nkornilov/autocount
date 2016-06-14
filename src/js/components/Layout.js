@@ -1,9 +1,12 @@
 var React = require('react');
+var Header = require('./Header');
 
 module.exports = React.createClass({
   render: function () {
     return (
-      <div>This is Navigation</div>
+      <div className="ui-layout">
+        <Header />
+      </div>
     )
   }
 });
