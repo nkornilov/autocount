@@ -48,7 +48,8 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(38);
-	var Header = __webpack_require__(168);
+	var Navigation = __webpack_require__(168);
+	var Header = __webpack_require__(169);
 
 	var Main = React.createClass({
 	  displayName: 'Main',
@@ -57,7 +58,9 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'ui-layout' },
-	      React.createElement(Header, null)
+	      React.createElement(Navigation, null),
+	      React.createElement(Header, null),
+	      React.createElement('div', { className: 'container' })
 	    );
 	  }
 	});
@@ -20365,42 +20368,38 @@
 
 	var React = __webpack_require__(1);
 
+	var Navigation = React.createClass({
+	  displayName: "Navigation",
+
+	  render: function render() {
+	    return React.createElement("div", { className: "ui-sidebar-wrap" });
+	  }
+	});
+
+	module.exports = Navigation;
+
+/***/ },
+/* 169 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
 	var Header = React.createClass({
 	  displayName: "Header",
 
 	  render: function render() {
 	    return React.createElement(
-	      "navs",
-	      null,
+	      "div",
+	      { className: "ui-header-wrap" },
 	      React.createElement(
-	        "ul",
-	        { className: "nav nav-pills" },
+	        "div",
+	        { className: "ui-header" },
 	        React.createElement(
-	          "li",
-	          { role: "presentation", className: "active" },
-	          React.createElement(
-	            "a",
-	            { href: "#" },
-	            "Home"
-	          )
-	        ),
-	        React.createElement(
-	          "li",
-	          { role: "presentation" },
-	          React.createElement(
-	            "a",
-	            { href: "#" },
-	            "Profile"
-	          )
-	        ),
-	        React.createElement(
-	          "li",
-	          { role: "presentation" },
-	          React.createElement(
-	            "a",
-	            { href: "#" },
-	            "Messages"
-	          )
+	          "div",
+	          { className: "ui-page-page-title pull-left" },
+	          "Главная"
 	        )
 	      )
 	    );
