@@ -7,6 +7,8 @@ app.get('/autocount', function (req, res) {
 });
 
 app.use('/', express.static(__dirname + '/public'));
+app.use('/node_modules', express.static(__dirname + '/node_modules'));
+
 
 app.listen(PORT, console.info('Server is started on ' + PORT))
   .on('error', console.error);
