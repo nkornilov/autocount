@@ -59,7 +59,6 @@
 	      'div',
 	      { className: 'ui-layout' },
 	      React.createElement(Navigation, null),
-	      React.createElement(Header, null),
 	      React.createElement('div', { className: 'container' })
 	    );
 	  }
@@ -20371,8 +20370,41 @@
 	var Navigation = React.createClass({
 	  displayName: "Navigation",
 
+	  getInitialState: function getInitialState() {
+	    this.navs = ["Главная", "Осмотр", "Поиск"];
+	    return {
+	      active: 1
+	    };
+	  },
+	  mapNavs: function mapNavs() {
+	    var _this = this;
+
+	    return this.navs.reverse().map(function (navName, index) {
+	      return React.createElement(
+	        "li",
+	        { role: "presentation", key: index, className: index === _this.state.active ? "active" : "" },
+	        React.createElement(
+	          "a",
+	          { href: "javascript:void(0)", className: "ui-navigation-item" },
+	          navName
+	        )
+	      );
+	    });
+	  },
 	  render: function render() {
-	    return React.createElement("div", { className: "ui-sidebar-wrap" });
+	    return React.createElement(
+	      "div",
+	      { className: "ui-navigation" },
+	      React.createElement(
+	        "div",
+	        { className: "container" },
+	        React.createElement(
+	          "ul",
+	          { className: "nav nav-pills " },
+	          this.mapNavs()
+	        )
+	      )
+	    );
 	  }
 	});
 

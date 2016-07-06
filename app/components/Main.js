@@ -8,7 +8,6 @@ var Main = React.createClass({
     return (
       <div className="ui-layout">
         <Navigation />
-        <Header />
         <div className="container">
 
         </div>
